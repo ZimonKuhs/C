@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     char* amountString = argv[1];
     char* balanceString = argv[2];
 
-    int amount = strtol(amountString, &amountString, 10);
+    size_t amount = strtol(amountString, &amountString, 10);
     float balance = strtof(balanceString, &balanceString);
 
     if (amount < 0 || balance < 0) {
