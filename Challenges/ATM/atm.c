@@ -1,10 +1,25 @@
+/**
+ *  Represents an ATM machine.
+ *
+ *  @author Zimon Kuhs
+ *  @date   2021-07-05
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "../Utility/ProgramUtility.c"
 
+/**
+ *  Parses an amount and a balance, calculating the new balance after a withdraw is made.
+ *  <p>
+ *  TODO: If a withdraw is not applicable (balance too low) no warning is reported.
+ *  TODO: Should not be a simple main method.
+ *
+ *  @param argc The amount of arguments to the program.
+ *  @param argv The arguments to the program.
+ */
 int main(int argc, char **argv) {
     if (argc != 3) {
-        // TODO: Create utility file for error with message as one function.
         error("Usage: atm [transaction amount] [initial balance]");
     }
 

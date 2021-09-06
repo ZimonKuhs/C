@@ -1,7 +1,20 @@
+/**
+ *  Utility functions for file and file content management.
+ *
+ *  @author Zimon Kuhs
+ *  @date   2021-07-05
+ */
+
 #include "./ProgramUtility.c"
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ *  Calculates the number of lines in a file.
+ *
+ *  @param file Pointer to the file to investigate.
+ *  @return     The number of lines in the file.
+ */
 size_t numberOfLines(FILE *file) {
     char character;
     size_t lines = 0;
@@ -16,7 +29,13 @@ size_t numberOfLines(FILE *file) {
     return lines;
 }
 
-char **fileAsLines(char *fileName) {
+/**
+ *  Retrieves the contents of a file as an array of strings.
+ *
+ *  @param file Pointer to the file to parse.
+ *  @return     The string lines from the file.
+ */
+char** fileAsLines(char *fileName) {
 
     FILE *file = fopen(fileName, "r");
     if (!file) {
